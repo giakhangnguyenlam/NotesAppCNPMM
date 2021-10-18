@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "fb6185f4-72cf-448a-ba3b-af8c6153c0b6",
+		"name": "SeminarCNPMM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Khang\",\r\n    \"username\":\"khanguser10\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/signup",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"khanguser09\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA4Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MTQwNCwiZXhwIjoxNjM0NjI3ODA0fQ.2nu15fkMKH55CMdmzHohC7BcHHxjG1jT0NkgNmDT5qs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"khangupdate\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/user/username/khanguser09",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"username",
+						"khanguser09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MjA0NiwiZXhwIjoxNjM0NjI4NDQ2fQ.K6L47PXaOMDHrkv0nSPBK5dRT764kTSvTfPJVMtTlpk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : 8,\r\n    \"title\" : \"This is a title\",\r\n    \"date\":\"01-01-2000\",\r\n    \"content\":\"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/user/note",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Note",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MjA0NiwiZXhwIjoxNjM0NjI4NDQ2fQ.K6L47PXaOMDHrkv0nSPBK5dRT764kTSvTfPJVMtTlpk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/user/note/3",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"note",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MjA0NiwiZXhwIjoxNjM0NjI4NDQ2fQ.K6L47PXaOMDHrkv0nSPBK5dRT764kTSvTfPJVMtTlpk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/user/note/8",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"note",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get finished notes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MjA0NiwiZXhwIjoxNjM0NjI4NDQ2fQ.K6L47PXaOMDHrkv0nSPBK5dRT764kTSvTfPJVMtTlpk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/user/note/finished/8",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"note",
+						"finished",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update note",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MjA0NiwiZXhwIjoxNjM0NjI4NDQ2fQ.K6L47PXaOMDHrkv0nSPBK5dRT764kTSvTfPJVMtTlpk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"This is update title\",\r\n    \"date\":\"17-10-2021\",\r\n    \"content\":\"this is update content\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/user/note/4",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"note",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update status note",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MjA0NiwiZXhwIjoxNjM0NjI4NDQ2fQ.K6L47PXaOMDHrkv0nSPBK5dRT764kTSvTfPJVMtTlpk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://seminarcnpmm.herokuapp.com/user/note/status/5",
+					"protocol": "https",
+					"host": [
+						"seminarcnpmm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"note",
+						"status",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
