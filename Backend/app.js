@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 require('dotenv').config();
 require('./config/DBConnection');
+const {authenToken} =  require('./middleware/jwtfilter');
 
 // ==================> Declare router <=====================
 
@@ -40,7 +41,7 @@ app.use((req, res, next) => {
 
 // ================> Routes <=======================
 app.use('/', indexRouter);
-app.use('/user', userRouter);
+app.use('/user', authenToken, userRouter);
 
 
 

@@ -2,6 +2,7 @@ const Note = require('../schemas/NoteSchema');
 
 var createNote = (req, res) => {
     let note =  new Note(req.body);
+    note.status = 'unfinished';
     note.save((err, result) => {
         if(err) return res.json({mess: err})
         return res.json(result);
@@ -14,7 +15,6 @@ var updateNode = (req, res) => {
         note.title = req.body.title;
         note.date = req.body.date;
         note.content = req.body.content;
-        note.status = req.body.status;
         note.save((err, result) => {
             if(err) return res.json({mess: err})
             return res.json(result);

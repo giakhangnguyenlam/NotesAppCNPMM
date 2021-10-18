@@ -5,7 +5,8 @@ const autoIncrement = require('mongoose-auto-increment');
 var UserSchema = new Schema({
     name: String,
     username: String,
-    password: String
+    password: String,
+    role: String
 })
 
 autoIncrement.initialize(mongoose.connection);

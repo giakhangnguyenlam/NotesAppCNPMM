@@ -4,7 +4,7 @@ const autoIncrement = require('mongoose-auto-increment');
 
 var NoteSchema = new Schema({
     userId: {
-        type: Schema.Types.ObjectId,
+        type: Schema.Types.Number,
         ref: 'UserSchema'
     },
     title: String,
