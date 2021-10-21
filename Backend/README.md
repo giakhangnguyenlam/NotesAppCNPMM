@@ -17,7 +17,7 @@ link: https://seminarcnpmm.herokuapp.com/signup
 ### Response
 ```
 {
-    "id": "8"
+    "id": 8
     "username": "khanguser09",
     "name": "Khang",
     "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MTcxMywiZXhwIjoxNjM0NjI4MTEzfQ.3Hg27Oz7OaoSsyOJRHS7nkHC6CaJDPlLjDlqP9I3ZMw"
@@ -38,7 +38,7 @@ link: https://seminarcnpmm.herokuapp.com/login
 ### Response
 ```
 {
-    "id": "8"
+    "id": 8
     "username": "khanguser09",
     "name": "Khang",
     "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MTgzMSwiZXhwIjoxNjM0NjI4MjMxfQ.H0rJRaTADq_soH9xV2_zWGta42dw9zPr2gDZtjJjhwk"
@@ -67,7 +67,7 @@ link: https://seminarcnpmm.herokuapp.com/user/username/khanguser09
 ### Response
 ```
 {
-    "id": "8"
+    "id": 8
     "username": "khanguser09",
     "name": "khangupdate",
     "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtoYW5ndXNlcjA5Iiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTYzNDU0MjA0NiwiZXhwIjoxNjM0NjI4NDQ2fQ.K6L47PXaOMDHrkv0nSPBK5dRT764kTSvTfPJVMtTlpk"

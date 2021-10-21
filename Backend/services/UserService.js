@@ -20,7 +20,7 @@ var signup = (req, res) => {
                         role: result.role
                     }
                     const accessToken =  jwt.sign(data, process.env.TOKEN_SECRET, {expiresIn:"24h"});
-                    let userModel = new UserModel(result.id, result.username, result.name, accessToken);
+                    let userModel = new UserModel(result._id, result.username, result.name, accessToken);
                     return res.json(userModel)
                 })
             })
@@ -44,7 +44,7 @@ var login = (req, res) => {
                         role: user.role
                     }
                     const accessToken =  jwt.sign(data, process.env.TOKEN_SECRET, {expiresIn:"24h"});
-                    let userModel = new UserModel(user.id, user.username, user.name, accessToken);
+                    let userModel = new UserModel(user._id, user.username, user.name, accessToken);
                     return res.json(userModel);
                 }
                 else{
@@ -73,7 +73,7 @@ var updateUser = (req, res) => {
                         role: result.role
                     }
                     const accessToken =  jwt.sign(data, process.env.TOKEN_SECRET, {expiresIn:"24h"});
-                    let userModel = new UserModel(result.id, result.username, result.name, accessToken);
+                    let userModel = new UserModel(result._id, result.username, result.name, accessToken);
                     return res.json(userModel)
                 })
             })
