@@ -69,3 +69,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # noteappclient
+{
+  
+    "axios": "^0.23.0",  (Axios là một HTTP client được viết dựa trên Promises được dùng để hỗ trợ cho việc xây dựng các ứng dụng API .
+    sử dụng react axio để trao đổi với các API phía notejs)
+    "jsonwebtoken": "^8.5.1", (Trao đổi thông tin: phương tiện được đại diện cho những yêu cầu cần thiết để chuyển giao liên tục giữa hai bên, bao gồm Client (máy khách) và        Server (máy chủ), từ đó xâu chuỗi những mã JWT lại để định dạng bằng JSON. )
+    "jwt-decode": "^3.1.2", ( giải mã chuỗi jsonwebtoken)
+    "timeago.js": "^4.0.2", sử dụng để Dấu thời gian Javascript đến thời gian tương đối ( ví dụ: 1 week ago)
+  },
