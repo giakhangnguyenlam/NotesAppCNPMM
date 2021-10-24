@@ -23,11 +23,18 @@ function Login({ setIsLogin }) {
         try {
             const res = await axios.post('https://seminarcnpmm.herokuapp.com/signup', {
                 name: user.name,
-                username: user.email,
+                username: user.username,
                 password: user.password
             })
-            setUser({ name: '', username: '', password: '' })
-            setErr(res.data.mess)
+            if (res.data.jwt) {
+                setUser({ name: '', username: '', password: '' })                   
+                localStorage.setItem('jwt', res.data.jwt)
+                localStorage.setItem('id', res.data.id)
+                setIsLogin(true)
+            } else {
+                alert("Account already exists")
+            }
+            
 
         } catch (err) {
             err.response.data.mess && setErr(err.response.data.mess)
@@ -82,7 +89,7 @@ function Login({ setIsLogin }) {
             < div className="register create-note" style={style}>
             <h2 > Register </h2>
                 <form onSubmit = { registerSubmit } >
-                    <input type = "text" name = "name" id = "register-name" placeholder = "User Name"
+                    <input type = "text" name = "name" id = "register-name" placeholder = "Name"
                     required value = { user.name } onChange = { onChangeInput }/>
 
                     <input type = "text" name = "username" id = "register-username"
